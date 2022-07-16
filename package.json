@@ -1,0 +1,30 @@
+{
+  "name": "json-stringify-pretty-compact-cli",
+  "version": "4.0.0",
+  "description": "CLI interface for json-stringify-pretty-compact library",
+  "main": "index.js",
+  "type": "module",
+  "repository": "avantgardnerio/json-stringify-pretty-compact-cli",
+  "bin": {
+    "json-spc": "bin/cli.js"
+  },
+  "keywords": [
+    "JSON",
+    "stringify",
+    "pretty",
+    "print",
+    "pretty-print",
+    "compact",
+    "indent",
+    "format",
+    "formatter"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brent Gardner",
+  "license": "MIT",
+  "dependencies": {
+    "json-stringify-pretty-compact": "^4.0.0"
+  }
+}
