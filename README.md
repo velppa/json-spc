@@ -1,4 +1,4 @@
-# json-stringify-pretty-compact-cli
+# json-spc
 
 A CLI wrapper around the [json-stringify-pretty-compact-cli library](https://www.npmjs.com/package/json-stringify-pretty-compact).
 
@@ -53,20 +53,51 @@ into:
 ## Installation
 
 ```
-npm install json-stringify-pretty-compact-cli
+npm install json-spc
 ```
 
 ## Usage
 
 ```shell
-json-spc [--indent=<spaces>] [--max-length=<characters>] <file.json> [> newfile.json]
+cat file.json | json-spc [--indent=<spaces>] [--max-length=<characters>] [--start=<int>] [--end=<int>]
 ```
 
 ## Options
 
-- indent: Defaults to 2. Works exactly like the third parameter of JSON.stringify.
-- max-length: Defaults to 80. Lines will be tried to be kept at maximum this many characters long.
+- `indent`: Defaults to 2. Works exactly like the third parameter of JSON.stringify.
+- `maxlength`: Defaults to 100. Lines will be tried to be kept at maximum this many characters long.
+- `start`: format portion of stdin starting at position, if `start` and `end` provided
+- `end`: format portion of stdin ending at position, if `start` and `end` provided
+
+## Usage with format-all-buffer.el
+[format-all](https://github.com/lassik/emacs-format-all-the-code)
+Emacs package allows to provide custom formatters.  This fork of
+[json-stringify-pretty-compact-cli][upstream] exists to support
+`format-all`, namely `M-x format-all-buffer` and `M-x
+format-all-region` commands.
+
+This is how to configure `json-spc` formatter:
+
+```emacs-lisp
+(define-format-all-formatter json-spc
+    (:executable "json-spc")
+    (:install)
+    (:languages "JSON")
+    (:features region)
+    (:format
+     (format-all--buffer-easy
+      executable
+      "--indent=3"
+      "--maxlength=100"
+      (when region
+        (list "--start" (number-to-string (1- (car region)))
+              "--end" (number-to-string (1- (cdr region))))))))
+```
+
 
 ## License
 
 [MIT](LICENSE).
+
+
+[upstream]: https://github.com/avantgardnerio/json-stringify-pretty-compact-cli

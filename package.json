@@ -1,10 +1,10 @@
 {
-  "name": "json-stringify-pretty-compact-cli",
-  "version": "4.0.0",
+  "name": "json-spc",
+  "version": "1.0.0",
   "description": "CLI interface for json-stringify-pretty-compact library",
   "main": "index.js",
   "type": "module",
-  "repository": "avantgardnerio/json-stringify-pretty-compact-cli",
+  "repository": "velppa/json-spc",
   "bin": {
     "json-spc": "bin/cli.js"
   },
@@ -17,14 +17,17 @@
     "compact",
     "indent",
     "format",
-    "formatter"
+    "formatter",
+    "emacs",
+    "format-all"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brent Gardner",
+  "author": "Pavel Popov",
   "license": "MIT",
   "dependencies": {
-    "json-stringify-pretty-compact": "^4.0.0"
+    "json-stringify-pretty-compact": "^4.0.0",
+    "command-line-args": "^5.2.0"
   }
 }
