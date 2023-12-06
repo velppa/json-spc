@@ -1,6 +1,6 @@
 # json-spc
 
-A CLI wrapper around the [json-stringify-pretty-compact-cli library](https://www.npmjs.com/package/json-stringify-pretty-compact).
+A CLI wrapper around the [json-stringify-pretty-compact-cli][lib] library.
 
 Thanks and acknowledgements to Simon Lydell for creating this wonderful library.
 
@@ -59,7 +59,7 @@ npm install json-spc
 ## Usage
 
 ```shell
-cat file.json | json-spc [--indent=<spaces>] [--max-length=<characters>] [--start=<int>] [--end=<int>]
+cat file.json | json-spc [--indent=<spaces>] [--max-length=<characters>] [--start=<int> --end=<int>]
 ```
 
 ## Options
@@ -71,17 +71,16 @@ cat file.json | json-spc [--indent=<spaces>] [--max-length=<characters>] [--star
 
 ## Usage with format-all-buffer.el
 [format-all](https://github.com/lassik/emacs-format-all-the-code)
-Emacs package allows to provide custom formatters.  This fork of
+Emacs package allows providing custom formatters.  This fork of
 [json-stringify-pretty-compact-cli][upstream] exists to support
-`format-all`, namely `M-x format-all-buffer` and `M-x
-format-all-region` commands.
+`format-all`, namely `M-x format-all-buffer` and `M-x format-all-region` commands.
 
 This is how to configure `json-spc` formatter:
 
 ```emacs-lisp
 (define-format-all-formatter json-spc
     (:executable "json-spc")
-    (:install)
+    (:install "npm i -g json-spc")
     (:languages "JSON")
     (:features region)
     (:format
@@ -97,7 +96,8 @@ This is how to configure `json-spc` formatter:
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE)
 
 
 [upstream]: https://github.com/avantgardnerio/json-stringify-pretty-compact-cli
+[lib]: https://www.npmjs.com/package/json-stringify-pretty-compact
