@@ -1,6 +1,6 @@
 # json-spc
 
-A CLI wrapper around the [json-stringify-pretty-compact-cli][lib] library.
+A CLI wrapper around the [json-stringify-pretty-compact][lib] library.
 
 Thanks and acknowledgements to Simon Lydell for creating this wonderful library.
 
