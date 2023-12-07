@@ -65,7 +65,7 @@ cat file.json | json-spc [--indent=<spaces>] [--max-length=<characters>] [--star
 ## Options
 
 - `indent`: Defaults to 2. Works exactly like the third parameter of JSON.stringify.
-- `maxlength`: Defaults to 100. Lines will be tried to be kept at maximum this many characters long.
+- `maxlength`: Defaults to 120. Lines will be tried to be kept at maximum this many characters long.
 - `start`: format portion of stdin starting at position, if `start` and `end` provided
 - `end`: format portion of stdin ending at position, if `start` and `end` provided
 
