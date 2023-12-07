@@ -4,7 +4,10 @@
   "description": "CLI interface for json-stringify-pretty-compact library",
   "main": "index.js",
   "type": "module",
-  "repository": "velppa/json-spc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/velppa/json-spc.git"
+  },
   "bin": {
     "json-spc": "bin/cli.js"
   },
