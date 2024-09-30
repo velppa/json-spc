@@ -11,7 +11,7 @@ const opts = commandLineArgs([
   { name: "maxlength", type: Number, default: 120 },
 ]);
 
-console.error(`opts: ${JSON.stringify(opts)}`)
+// console.error(`opts: ${JSON.stringify(opts)}`)
 
 const useRegion = opts.start !== undefined && opts.end !== undefined
 
