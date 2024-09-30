@@ -1,6 +1,6 @@
 {
   "name": "json-spc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI interface for json-stringify-pretty-compact library",
   "main": "index.js",
   "type": "module",
